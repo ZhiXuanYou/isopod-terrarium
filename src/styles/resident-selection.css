@@ -1,0 +1,257 @@
+.resident-selection {
+  width: min(100%, 68rem);
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  border: 5px solid #6b5840;
+  border-radius: 0.8rem;
+  color: #433525;
+  background: #dcc69e;
+  box-shadow:
+    inset 0 0 0 3px #f4e5bd,
+    0 7px 0 #493b2d,
+    0 1rem 2rem rgb(62 48 32 / 18%);
+}
+
+.resident-selection__heading {
+  max-width: 40rem;
+  margin: 0 auto 1.25rem;
+  text-align: center;
+}
+
+.resident-selection__eyebrow {
+  margin: 0 0 0.35rem;
+  color: #78814a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.resident-selection h2 {
+  margin: 0;
+  color: #403725;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 4vw, 2.35rem);
+}
+
+.resident-selection__heading > p:last-child {
+  margin: 0.55rem 0 0;
+  color: #695942;
+}
+
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.65rem, 1.5vw, 1rem);
+}
+
+.species-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 3px solid #54442f;
+  border-radius: 0.45rem;
+  flex-direction: column;
+  align-items: center;
+  color: #fff4d2;
+  background: #80583a;
+  box-shadow: inset 0 3px 0 rgb(255 255 255 / 15%), 0 4px 0 #463626;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.species-card:hover:not(:disabled) {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+.species-card:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+.species-card:disabled {
+  cursor: default;
+  filter: saturate(0.75);
+}
+
+.species-card:focus-visible,
+.resident-slot button:focus-visible,
+.start-care-button:focus-visible {
+  outline: 3px solid #d99d32;
+  outline-offset: 3px;
+}
+
+.species-card__preview {
+  display: grid;
+  width: 100%;
+  height: clamp(5.5rem, 12vw, 8rem);
+  margin-bottom: 0.55rem;
+  place-items: center;
+  border: 2px solid #4a3927;
+  background: radial-gradient(circle, #9c7952, #654731 72%);
+}
+
+.species-card__preview img {
+  display: block;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  user-select: none;
+}
+
+.species-card strong {
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.species-card > span:last-child {
+  margin-top: 0.2rem;
+  color: #efd49d;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.species-card__count {
+  position: absolute;
+  z-index: 1;
+  top: 0.4rem;
+  right: 0.4rem;
+  min-width: 1.9rem;
+  padding: 0.2rem 0.35rem;
+  border: 2px solid #423321;
+  border-radius: 999px;
+  color: #fff8df;
+  background: #718044;
+  box-shadow: 0 2px 0 #423321;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.resident-slots {
+  display: grid;
+  margin-top: 1.2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.resident-slot {
+  display: grid;
+  min-width: 0;
+  min-height: 5.4rem;
+  padding: 0.65rem;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+  border: 3px dashed #8b7451;
+  background: rgb(255 246 216 / 42%);
+}
+
+.resident-slot--filled {
+  border-style: solid;
+  border-color: #665036;
+  background: #f1dfb6;
+}
+
+.resident-slot__number {
+  display: grid;
+  width: 1.7rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 2px solid #493824;
+  border-radius: 50%;
+  color: #fff5d5;
+  background: #7a5737;
+  font-weight: 900;
+}
+
+.resident-slot img {
+  width: 3.3rem;
+  height: 3rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.resident-slot div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.resident-slot div span {
+  overflow: hidden;
+  color: #766142;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resident-slot p {
+  margin: 0;
+  color: #77684d;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.resident-slot button {
+  padding: 0.38rem 0.5rem;
+  border: 2px solid #4a3826;
+  color: #fff2cf;
+  background: #8b5b39;
+  box-shadow: 0 2px 0 #4a3826;
+  cursor: pointer;
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.start-care-button {
+  display: block;
+  min-width: 11rem;
+  margin: 1.25rem auto 0;
+  padding: 0.8rem 1.5rem;
+  border: 3px solid #3f3824;
+  border-radius: 0.45rem;
+  color: #fff8d8;
+  background: #6f7e42;
+  box-shadow: inset 0 3px 0 rgb(255 255 255 / 18%), 0 5px 0 #3f3824;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.start-care-button:disabled {
+  color: #d1c5a7;
+  background: #817964;
+  cursor: not-allowed;
+  filter: grayscale(0.35);
+}
+
+@media (max-width: 38rem) {
+  .resident-selection {
+    padding: 0.8rem;
+    border-width: 4px;
+  }
+
+  .species-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .species-card {
+    padding: 0.55rem;
+  }
+
+  .species-card__preview {
+    height: 5.2rem;
+  }
+
+  .resident-slots {
+    grid-template-columns: 1fr;
+  }
+
+  .resident-slot {
+    min-height: 4.5rem;
+  }
+}

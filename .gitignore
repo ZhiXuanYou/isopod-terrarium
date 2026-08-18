@@ -1,0 +1,33 @@
+# Dependencies and package-manager cache
+node_modules/
+.npm-cache/
+
+# Build and test output
+dist/
+dist-ssr/
+coverage/
+
+# Vite and TypeScript generated files
+.vite/
+.vite-inspect/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local environment and logs
+*.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
